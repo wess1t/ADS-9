@@ -7,22 +7,22 @@
 #include <algorithm>
 
 class PMTree {
-private:
+ private:
   struct N {
     char val;
     std::vector<std::shared_ptr<N>> children;
-    N(char v) : val(v) {}
+    explicit N(char v) : val(v) {}
   };
   std::shared_ptr<N> root;
   std::vector<char> elements;
   int totalPermutations;
   void buildTree(std::shared_ptr<N> node, std::vector<char> remaining);
-  void getAllPermutationsDFS(std::shared_ptr<N> node, std::vector<char>& current, 
-                               std::vector<std::vector<char>>& result);
+  void getAllPermutationsDFS(std::shared_ptr<N> node, std::vector<char>& current,
+                             std::vector<std::vector<char>>& result);
   int getSubtreePermutations(std::shared_ptr<N> node);
 
-public:
-  PMTree(const std::vector<char>& input);
+ public:
+  explicit PMTree(const std::vector<char>& input);
   friend std::vector<std::vector<char>> getAllPerms(PMTree& tree);
   friend std::vector<char> getPerm1(PMTree& tree, int num);
   friend std::vector<char> getPerm2(PMTree& tree, int num);
