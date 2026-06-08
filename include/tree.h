@@ -17,7 +17,8 @@ class PMTree {
   std::vector<char> elements;
   int totalPermutations;
   void buildTree(std::shared_ptr<N> node, std::vector<char> remaining);
-  void getAllPermutationsDFS(std::shared_ptr<N> node, std::vector<char>& current,
+  void getAllPermutationsDFS(std::shared_ptr<N> node,
+                             std::vector<char>& current,
                              std::vector<std::vector<char>>& result);
   int getSubtreePermutations(std::shared_ptr<N> node);
 
