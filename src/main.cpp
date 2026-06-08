@@ -1,6 +1,4 @@
 // Copyright 2022 NNTU-CS
-#include "tree.h"
-
 #include <chrono>
 #include <cmath>
 #include <iomanip>
@@ -8,6 +6,7 @@
 #include <random>
 #include <string>
 #include <vector>
+#include "tree.h"
 
 template<typename Func>
 double measureTime(Func func) {
